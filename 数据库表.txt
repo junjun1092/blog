@@ -1,0 +1,14 @@
+用户表，User：
+    用户标识：userid varchar
+姓名：name   	varchar
+年龄：age     	number
+性别：gender  	varchar
+手机：phone  	varchar
+邮箱：email      varchar
+评论：comment 	varchar（包括给别人的评论和别人给自己的评论）
+发布消息：info   varchar
+
+私信列表：letter
+信件标识：letterId       varchar
+信件内容：cletterCntent  varchar
+附件：attachment       varchar
