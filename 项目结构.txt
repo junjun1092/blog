@@ -1,0 +1,21 @@
+├── conf
+│   └── app.conf   
+├── controllers
+│   ├── admin
+│   └── default.go
+├── main.go
+├── models
+│   └── models.go
+├── static
+│   ├── css
+│   ├── ico
+│   ├── img
+│   └── js
+└── views
+    ├── admin
+    └── index.tpl
+
+    beego的项目结构
+    mvc的设计思路
+
+    今天比较累了，没有看太多
