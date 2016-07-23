@@ -8,3 +8,6 @@ web service中间件，给外部提供过滤之后的数据；微官网，微信，支付宝和医联山东；
 烟台毓璜顶医院
 
 mybatis中入参使用list，需要用foreach，遍历这个list，需要增加item
+
+
+现在还不知道beego是如何运行的
