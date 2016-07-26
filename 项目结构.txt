@@ -1,21 +1,21 @@
-©À©¤©¤ conf
-©¦   ©¸©¤©¤ app.conf   
-©À©¤©¤ controllers
-©¦   ©À©¤©¤ admin
-©¦   ©¸©¤©¤ default.go
-©À©¤©¤ main.go
-©À©¤©¤ models
-©¦   ©¸©¤©¤ models.go
-©À©¤©¤ static
-©¦   ©À©¤©¤ css
-©¦   ©À©¤©¤ ico
-©¦   ©À©¤©¤ img
-©¦   ©¸©¤©¤ js
-©¸©¤©¤ views
-    ©À©¤©¤ admin
-    ©¸©¤©¤ index.tpl
+ï»¿â”œâ”€â”€ conf
+â”‚   â””â”€â”€ app.conf   
+â”œâ”€â”€ controllers
+â”‚   â”œâ”€â”€ admin
+â”‚   â””â”€â”€ default.go
+â”œâ”€â”€ main.go
+â”œâ”€â”€ models
+â”‚   â””â”€â”€ models.go
+â”œâ”€â”€ static
+â”‚   â”œâ”€â”€ css
+â”‚   â”œâ”€â”€ ico
+â”‚   â”œâ”€â”€ img
+â”‚   â””â”€â”€ js
+â””â”€â”€ views
+    â”œâ”€â”€ admin
+    â””â”€â”€ index.tpl
 
-    beegoµÄÏîÄ¿½á¹¹
-    mvcµÄÉè¼ÆË¼Â·
+    beegoçš„é¡¹ç›®ç»“æ„
+    mvcçš„è®¾è®¡æ€è·¯
 
-    ½ñÌì±È½ÏÀÛÁË£¬Ã»ÓĞ¿´Ì«¶à
+    ä»Šå¤©æ¯”è¾ƒç´¯äº†ï¼Œæ²¡æœ‰çœ‹å¤ªå¤š
