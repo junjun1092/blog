@@ -5,7 +5,7 @@ C:\ProgramData\Oracle\Java\javapath;C:\Program Files\NVIDIA Corporation\PhysX\Co
 D:\Program Files\Git\cmd;D:\Program Files\Git\usr\bin;F:\Go\bin;
 D:\Program Files\TortoiseSVN\bin;%GOROOT%\bin;%GOPATH%\bin
 GOPATH环境变量配置：
-G:\Go\Development；即go的工作空间
+G:\Go\Development 即go的工作空间
 GOROOT环境变量配置：
 F:\Go；即go的安装目录
 这样配置之后在src目录下还是不能识别bee命令；
