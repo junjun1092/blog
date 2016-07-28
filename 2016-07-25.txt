@@ -6,3 +6,4 @@
 bee工具的安装：
 1 go get github.com/beego/bee,下载并安装bee工具到$GOPATH/bin目录下
 在$GOPATH/bin目录下执行bee命令是可以，但是在其他的文件夹下执行就不能识别，明天继续操作
+    
