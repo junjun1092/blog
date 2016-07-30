@@ -4,6 +4,9 @@ C:\ProgramData\Oracle\Java\javapath;C:\Program Files\NVIDIA Corporation\PhysX\Co
 %SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;
 D:\Program Files\Git\cmd;D:\Program Files\Git\usr\bin;F:\Go\bin;
 D:\Program Files\TortoiseSVN\bin;%GOROOT%\bin;%GOPATH%\bin
+
+Path环境变量改成下面这个，可以直接加载到
+G:\Go\Development\bin
 GOPATH环境变量配置：
 G:\Go\Development 即go的工作空间
 GOROOT环境变量配置：

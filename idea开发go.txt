@@ -1,1 +1,35 @@
-http://jingyan.baidu.com/article/f25ef25446109c482c1b821d.html
+﻿idea开发go
+以我的idea版本，2016.1.3为例：
+
+1 从idea插件官网下载开发go所需要的插件：官网地址：
+https://plugins.jetbrains.com/
+go插件地址：
+https://plugins.jetbrains.com/plugin/5047?pr=idea
+注意版本对应参照地址：
+https://github.com/go-lang-plugin-org/go-lang-idea-plugin
+注意哪个版本的idea需要下载哪个版本的插件
+
+
+2 下载完成之后，需要进行配置，
+找File--Settings，这里有好几个插件项
+
+
+All plugins 显示所有插件。
+Enabled 显示当前所有已经启用的插件。
+Disabled 显示当期那所有已经禁用的插件。
+Bundled 显示所有 IntelliJ IDEA 自带的插件。
+Custom 显示所有我们自行安装的插件，如果你自己装了很多次插件的话，这个选项会用得比较多。
+如上图标注 2 所示，启用的插件是被勾选的，如果要禁用一个插件，去掉勾选即可。
+如上图标注 3 所示，弹出 IntelliJ IDEA 公司自行开发的插件仓库列表，供下载安装。
+如上图标注 4 所示，弹出插件仓库中所有插件列表供下载安装。
+如上图标注 5 所示，浏览本地的插件文件进行安装，而不是从服务器上下载并安装。
+需要严重注意的是：在国内的网络下，很经常出现显示不了插件列表，或是显示了插件列表，无法下载完成安装。这时候请自行开VPN，一般都可以得到解决
+
+
+导入刚才下载的go插件，需要点击5，找到刚才下载插件的zip压缩包的位置，直接导入，重启idea即可；
+
+2 配置idea：
+idea中File-->Project Structure,找sdks，配上jdk和idea的安装路径，最重要的一点是配上go的安装目录，即go的sdk；在Project中配置项目默认的sdk，
+
+
+以上配置完成之后就可以开发go了
