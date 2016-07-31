@@ -1,4 +1,4 @@
-package main
+package blog
 
 import (
 	"github.com/astaxie/beego"
