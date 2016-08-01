@@ -1,0 +1,6 @@
+今天把mysql数据库装好了，直接下载的zip包，然后在mysql的bin目录下执行
+mysqld -install 注册mysql服务；
+这样就能识别mysql命令，mysql -uroot -proot 设置用户名密码分别为root，root
+今天学习了spring的定时任务处理，cron有一个网站可以自动识别定时频率，可以自由设置
+有些东西还是要整理成文档的形式，以免遗忘；
+明天开始学习beego和页面的交互；
