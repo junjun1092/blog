@@ -1,0 +1,34 @@
+顺能省立医院的项目公司这边包含三部分：
+老的中间件：HandHosPlatformService：和贾克涛对接
+新的中间件：HandHosPlatformSDSLService：和东华对接
+微信的项目：SN-SDSL-Server
+
+微信去调用两个中间件的数据，在微信中有proxy(对接老接口)和proxy2(对接新接口)，
+创建中间件接口对应的时候，项目中右键：new Web Service Client，在Service definition中输入中间件的路径url：
+比如：http://ih.sph.com.cn:2335/HandHosPlatformSDSLService/service/HosService?wsdl
+这样的话就会实现中间中暴露出来的所有方法，同时会生成5个文件；
+
+微信会直接引用proxy文件，这样去直接调用；
+在locator结尾的文件的SDSLHosServiceImplPort_address中输入要调用中间件的地址；如果本地启用了中间件工程，那么可以直接使用localhost加端口去调用；
+其他的文件基本不用处理；
+
+
+省立的中间件都在省立医院的前置机上，在这里调用中间件项目中的接口时就会出现超时，因为连接不上，对应接口的路径都在常量文件中配置:
+老的中间件常量文件为E:\workspace-sts-3.7.3.RELEASE\HandHosPlatformService\src\com\shunneng\framework\utils\Constants.java
+新的中间件为：E:\workspace-sts-3.7.3.RELEASE\HandHosPlatformSDSLService\src\com\shunneng\framework\utils\Constants.java
+因为和本机不在一个网段，所以启动本机项目的时候调用接口就会出现超时；
+解决办法，可以用ngrok将前置机中的地址转发出来，这样在本机就可以进行调用；需要配置ngrok.cfg配置文件
+jkt:
+    subdomain: "jkt"
+    proto:
+     http: 193.0.0.61:80
+  dw:
+    subdomain: "dw"
+    proto:
+     http: 192.168.53.67:1334
+
+在前置机中这样配置就可以进行访问了，在本地配置将http://193.0.0.61/JK/Api/Index/getdepts改为http://jkt.nanali.xyz:8888/JK/Api/Index/getdepts
+这样就可以访问了
+
+八月五号，今天晚上公司聚餐，白天处理公司的问题，没来得及看，下一步要处理一个加打印机的程序，没接触过，又是一个挑战啊
+
