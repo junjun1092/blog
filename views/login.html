@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../ststic/javascript/jquery.min.js" ></script>
+		<script type="text/javascript">
+			$("commitData").click(function(){
+				var params = {};
+				param.name = $("#userName").val();
+				params.password = $("password").val();
+				$.ajax({
+					type:"post",
+					url:"",
+					dataType:"json",
+					data:params,
+					async:true
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div>
+			<form>
+				用户名：<input name="userName" type="text" id="userName"/><br/>
+				密&nbsp;&nbsp;&nbsp;&nbsp;码：<input name="password" type="text" id="password"/>
+				<input type="submit" value="提交" id="commitData"/>
+			</form>
+			<div>
+				<a href="">忘记密码</a>&nbsp;&nbsp;
+				<a href="">注册</a>
+			</div>
+		</div>
+	</body>
+</html>
