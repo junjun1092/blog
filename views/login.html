@@ -5,18 +5,38 @@
 		<title></title>
 		<script type="text/javascript" src="../ststic/javascript/jquery.min.js" ></script>
 		<script type="text/javascript">
-			$("commitData").click(function(){
+			function login ()
+			{
+				var name = $("#userName").val();
+				var password = $("#password").val();
+				if (name.length == 0 || password.length == 0)
+				{
+					$("#err header").html("用户名或者密码不能为空");
+					$("#err").show("fast");
+					return false;
+				}
 				var params = {};
-				param.name = $("#userName").val();
-				params.password = $("password").val();
-				$.ajax({
+				params.name = name;
+				params.password = password;
+				$.ajax(
+					url:"LoginController.DoLogin",
 					type:"post",
-					url:"",
-					dataType:"json",
+					dataType:json,
 					data:params,
-					async:true
-				});
-			});
+					success:function (data) {
+						var ok = data.login;
+						if(ok)
+						{
+							window.location.href = "/";
+						}
+						else
+							{
+								$("#err header").html(data);
+								$("#err").show("fast");
+							}
+					}
+				)
+			}
 		</script>
 	</head>
 	<body>
@@ -24,12 +44,16 @@
 			<form>
 				用户名：<input name="userName" type="text" id="userName"/><br/>
 				密&nbsp;&nbsp;&nbsp;&nbsp;码：<input name="password" type="text" id="password"/>
-				<input type="submit" value="提交" id="commitData"/>
+				<input type="submit" value="提交" id="commitData" onclick="login()"/>
 			</form>
+			<div class="ui error message" id="err">
+				<div class="header"></div>
+			</div>
 			<div>
 				<a href="">忘记密码</a>&nbsp;&nbsp;
 				<a href="">注册</a>
 			</div>
+
 		</div>
 	</body>
 </html>
