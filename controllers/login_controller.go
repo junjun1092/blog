@@ -1,4 +1,4 @@
-package main
+package controllers
 
 import (
 	"beego-blog-master/controllers"
@@ -9,7 +9,7 @@ type LoginContorller struct {
 	controllers.BaseController
 }
 func (this *LoginContorller) login(){
-	this.TplNames = "login/login.html"
+	this.TplName = "login/login.html"
 }
 func (this *LoginContorller) DoLogin(){
 	name := this.GetString("name")

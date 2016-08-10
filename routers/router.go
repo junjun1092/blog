@@ -1,8 +1,10 @@
 package routers
 
 import (
-	_ "github.com/astaxie/beego"
-"github.com/ulticqin/beego-blog/controllers")
+	"myblog/controllers"
+	"github.com/astaxie/beego"
+)
 
-func init(){
+func init() {
+    beego.Router("/", &controllers.MainController{})
 }
