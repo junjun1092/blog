@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../ststic/javascript/jquery.min.js" ></script>
+		<script type="text/javascript">
+			function login ()
+			{
+				var name = $("#userName").val();
+				var password = $("#password").val();
+				if (name.length == 0 || password.length == 0)
+				{
+					$("#err header").html("用户名或者密码不能为空");
+					$("#err").show("fast");
+					return false;
+				}
+				var params = {};
+				params.name = name;
+				params.password = password;
+				$.ajax(
+					url:"LoginController.DoLogin",
+					type:"post",
+					dataType:json,
+					data:params,
+					success:function (data) {
+						var ok = data.login;
+						if(ok)
+						{
+							window.location.href = "/";
+						}
+						else
+							{
+								$("#err header").html(data);
+								$("#err").show("fast");
+							}
+					}
+				);
+			}
+		</script>
+	</head>
+	<body>
+		<div>
+			<form>
+				用户名：<input name="userName" type="text" id="userName"/><br/>
+				密&nbsp;码：<input name="password" type="text" id="password"/>
+				<input type="submit" value="提交" id="commitData" onclick="login()"/>
+			</form>
+			<div class="ui error message" id="err">
+				<div class="header"></div>
+			</div>
+			<div>
+				<a href="">忘记密码</a>&nbsp;&nbsp;
+				<a href="">注册</a>
+			</div>
+
+		</div>
+	</body>
+</html>
