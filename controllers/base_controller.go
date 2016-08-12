@@ -37,5 +37,7 @@ func (this *BaseController) AssigonIsAdmin(){
 	this.IsAdmin = true
 	this.Data["isAdmin"] = this.IsAdmin
 }
+func main(){
 
+}
 
