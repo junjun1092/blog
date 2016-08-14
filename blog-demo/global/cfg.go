@@ -6,21 +6,21 @@ import (
 )
 
 var (
-	RootEmail string
-	RootName string
-	RootPass string
-	RootPortrait string
-	BlogTitle string
-	BlogResume string
-	BlogLogo string
+	RootEmail      string
+	RootName       string
+	RootPass       string
+	RootPortrait   string
+	BlogTitle      string
+	BlogResume     string
+	BlogLogo       string
 	QiniuAccessKey string
 	QiniuSecretKey string
-	QiniuScope string
-	UseQiniu bool
+	QiniuScope     string
+	UseQiniu       bool
 )
 
-func initCfg()  {
-	RootName = g.Cfg.String("root_name");
+func initCfg() {
+	RootName = g.Cfg.String("root_name")
 	RootEmail = g.Cfg.String("root_email")
 	RootPass = g.Cfg.String("root_pass")
 	RootPortrait = g.Cfg.String("root_portrait")

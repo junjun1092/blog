@@ -28,5 +28,3 @@ func CatalogCacheDel(key string) error {
 func BlogCacheDel(key string) error {
 	return Cache.Delete(blogPrefix + key)
 }
-
-

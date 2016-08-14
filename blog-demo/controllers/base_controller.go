@@ -13,7 +13,7 @@ type BaseController struct {
 	IsAdmin bool
 }
 
-func (this *BaseController) Prepare(){
+func (this *BaseController) Prepare() {
 	this.Data["BlogLogo"] = g.BlogLogo
 	this.Data["BlogTitle"] = g.BlogTitle
 	this.Data["BlogResume"] = g.BlogResume
@@ -24,14 +24,14 @@ func (this *BaseController) Prepare(){
 
 }
 
-func (this *BaseController) AssigonIsAdmin(){
+func (this *BaseController) AssigonIsAdmin() {
 	bb_name := this.Ctx.GetCookie("bb_name")
 	bb_password := this.Ctx.GetCookie("bb_password")
 	if bb_name == "" || bb_password == "" {
 		this.IsAdmin = false
 		return
 	}
-	if bb_name != g.RootName  || bb_password != g.RootPass{
+	if bb_name != g.RootName || bb_password != g.RootPass {
 		this.IsAdmin = false
 	}
 	this.IsAdmin = true

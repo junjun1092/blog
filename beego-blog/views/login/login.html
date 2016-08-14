@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="/static/js/jquery-1.11.1.js"></script>
+    <script type="text/javascript">
+        function login()
+        {
+            var name = $("#userName").val()
+            alert("name:" + name.length);
+            var password = $("#password").val()
+//            if (name.length == 0) {
+//                $("#err .header").html("username is blank");
+//               // return false;
+//            }
+//
+//            if (password.length == 0) {
+//                $("#err .header").html("password is blank");
+//               // return false;
+//            }
+            $.ajax({
+                url:"LoginController.DoLogin",
+                type:"post",
+                beforeSend:function (xhr) {
+                    xhr.setRequestHeader("name",name);
+                    xhr.setRequestHeader("password",password)
+                },
+                success:function (data) {
+                    if (data.length == 0) {
+                        window.location.href="/";
+                    } else {
+                        $("#err .header").html(data);
+                        $("#err").show("fast");
+                    }
+                }
+            });
+        }
+
+    </script>
+</head>
+<body>
+    <form>
+        <div>
+            用户名：<input name="userName" type="text" id="userName"/>
+            密码：<input name="password" type="text" id="password"/>
+        </div>
+        <div class="ui error message" id="err">
+            <div class="header"></div>
+        </div>
+        <input type="submit" value="提交" onclick="login()"/>
+    </form>
+</body>
+</html>
